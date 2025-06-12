@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简洁群聊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- 侧边栏 - 好友和群组列表 -->
+        <div class="sidebar">
+            <div class="search-bar">
+                <input type="text" placeholder="搜索好友或群组">
+            </div>
+            
+            <div class="tab-buttons">
+                <button class="active" data-tab="friends">好友</button>
+                <button data-tab="groups">群组</button>
+            </div>
+            
+            <div class="list-container">
+                <!-- 好友列表 -->
+                <div class="list friends-list active" id="friends">
+                    <div class="list-item active">
+                        <div class="avatar">A</div>
+                        <div class="info">
+                            <div class="name">张三</div>
+                            <div class="last-msg">你好，最近怎么样？</div>
+                        </div>
+                        <div class="time">10:30</div>
+                    </div>
+                    <!-- 更多好友... -->
+                </div>
+                
+                <!-- 群组列表 -->
+                <div class="list groups-list" id="groups">
+                    <div class="list-item">
+                        <div class="avatar">群</div>
+                        <div class="info">
+                            <div class="name">技术交流群</div>
+                            <div class="last-msg">李四: 这个问题可以这样解决...</div>
+                        </div>
+                        <div class="time">昨天</div>
+                    </div>
+                    <!-- 更多群组... -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- 主聊天区域 -->
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="chat-title">张三</div>
+                <div class="chat-actions">
+                    <button class="btn-more">⋮</button>
+                </div>
+            </div>
+            
+            <div class="messages-container">
+                <div class="message received">
+                    <div class="avatar">A</div>
+                    <div class="content">
+                        <div class="text">你好，最近怎么样？</div>
+                        <div class="time">10:30</div>
+                    </div>
+                </div>
+                
+                <div class="message sent">
+                    <div class="content">
+                        <div class="text">我很好，谢谢关心！你呢？</div>
+                        <div class="time">10:32</div>
+                    </div>
+                </div>
+                <!-- 更多消息... -->
+            </div>
+            
+            <div class="message-input">
+                <textarea placeholder="输入消息..."></textarea>
+                <button class="btn-send">发送</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
